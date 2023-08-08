@@ -1,0 +1,20 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+
+  /* ### Neutral */
+
+  --LightGrayishCyan: hsl(180, 52%, 96%);
+  --LightGrayishCyan: hsl(180, 31%, 95%);
+  --DarkGrayishCyan: hsl(180, 8%, 52%);
+  --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+}
+
+header {
+  background-color: var(--DesaturatedDarkCyan) !important;
+  width: 100%;
+  margin-bottom: 1.5rem !important;
+}

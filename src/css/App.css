@@ -1,7 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
 :root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+
+  /* ### Neutral */
+
+  --LightGrayishCyan-Background: hsl(180, 52%, 96%);
+  --LightGrayishCyan: hsl(180, 31%, 95%);
+  --DarkGrayishCyan: hsl(180, 8%, 52%);
+  --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
 }
 
 * {
   padding: 0px !important;
   margin: 0px !important;
+}
+html,
+.App {
+  background-color: var(--LightGrayishCyan-Background);
+}
+.App {
+  font-family: "League Spartan", sans-serif;
+  height: fit-content;
+  overflow-x: hidden;
+}
+
+.filtersSection {
+  width: 75vw;
+  padding: 0.8rem 1.4rem !important;
+  background-color: white;
+  box-shadow: 0px 11px 20px 8px hsl(180, 18%, 90%);
+  position: absolute;
+  top: 8rem;
+  border-radius: 8px;
+}
+.closableFilter {
+  width: 100%;
+}
+.closableFilterText {
+  color: var(--DesaturatedDarkCyan);
+  padding: 0.3rem 0.4rem 0.1rem 0.5rem !important;
+  background-color: var(--LightGrayishCyan);
+  align-self: center;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.removeIcon {
+  background-color: var(--DesaturatedDarkCyan);
+  width: 1.7rem;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.removeIcon:hover {
+  cursor: pointer;
+  background-color: var(--VeryDarkGrayishCyan);
+}
+
+.filtersSection a {
+  color: var(--DarkGrayishCyan);
+  text-decoration: none;
+}
+.filtersSection a:hover {
+  color: var(--DesaturatedDarkCyan);
+  text-decoration: underline !important ;
+}
+
+.jopsContainer {
+  margin-top: 2rem !important;
+}
+.jobCard {
+  background-color: white;
+  width: 75vw;
+  padding: 1.5rem 1.5rem 1.5rem 2rem !important;
+  border-radius: 8px;
+  box-shadow: 0px 11px 20px 8px hsl(180, 18%, 90%);
+  margin-top: 2rem !important;
+}
+
+.featuredMark {
+  left: 0px;
+  top: 0px;
+  width: 6px;
+  height: 100%;
+  content: "";
+  border-radius: 8px 0px 0px 8px;
+  background-color: var(--DesaturatedDarkCyan);
+}
+
+.jobCard img {
+  height: 5rem;
+  margin-right: 1rem !important;
+}
+.jobCard .companyName {
+  margin-right: 0.7rem !important;
+  font-weight: 700;
+  color: var(--DesaturatedDarkCyan);
+}
+
+.jobCard .new {
+  font-weight: 700;
+  font-size: 14px;
+  background-color: var(--DesaturatedDarkCyan);
+  padding: 0.125rem 0.4rem 0rem 0.4rem !important;
+  margin-right: 0.5rem !important;
+  color: white;
+  border-radius: 15px;
+}
+.jobCard .featured {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0.125rem 0.4rem 0rem 0.4rem !important;
+  background-color: var(--VeryDarkGrayishCyan);
+  color: white;
+  border-radius: 15px;
+}
+.jobCard .position {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--VeryDarkGrayishCyan);
+}
+
+.jobCard .position:hover {
+  cursor: pointer;
+  color: var(--DesaturatedDarkCyan);
+}
+
+.jobCard .jobProps {
+  color: var(--DarkGrayishCyan);
+}
+.jobCard .jobProps li:first-child {
+  list-style-type: none;
+}
+.jobCard .jobProps li {
+  margin-right: 1.5rem !important;
+}
+.jobCard .roles {
+  display: flex;
+  justify-content: end;
+}
+.jobCard .role {
+  color: var(--DesaturatedDarkCyan);
+  font-size: 0.94em;
+  font-weight: 700;
+  margin-right: 0.5rem !important;
+  padding: 0.4rem 0.7rem !important;
+  border-radius: 5px;
+  background-color: var(--LightGrayishCyan);
+  transition: 0.2s;
+  width: fit-content !important;
+  margin-bottom: 0.5rem !important;
+}
+.jobCard .role:hover {
+  cursor: pointer;
+  color: var(--LightGrayishCyan);
+  background-color: var(--DesaturatedDarkCyan);
+}
+
+@media (max-width: 630px) {
+  .jopsContainer {
+    margin-top: 4.5rem !important;
+  }
+  .jobCard {
+    flex-direction: column;
+    padding-top: 3rem !important;
+    margin-top: 3.4rem !important;
+  }
+  .jobCard .position {
+    margin: 1rem 0rem !important;
+  }
+  .jobCard .jobProps {
+    margin-bottom: 1rem !important;
+  }
+  .roles {
+    margin-top: 1rem !important;
+    align-self: start !important;
+    justify-content: start !important;
+  }
+  .jobCard img {
+    position: absolute;
+    top: -2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .attribution {
+    text-align: center !important;
+    margin: 2rem 2rem !important;
+  }
 }
